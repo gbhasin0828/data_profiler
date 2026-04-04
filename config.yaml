@@ -1,0 +1,25 @@
+output_path: output/profiles.json
+
+profiler:
+  sample_pct: 1.0       # scan 1% of rows — remove for full scan
+  concurrency: 4        # parallel tables at once
+  stats_depth: standard # basic | standard | full
+
+databases:
+  - name: local_duckdb
+    type: duckdb
+    connection_string: sample/data.duckdb
+
+  - name: local_sqlite
+    type: sqlite
+    connection_string: sample/data.sqlite
+
+  - name: snowflake_prod
+    type: snowflake
+    connection_string: snowflake://bhasinga:Merepapa12345678@ANJXYBG-ZW83294/SAMPLE_DATA/SALES?warehouse=COMPUTE_WH
+
+
+# uncomment and fill in credentials to profile Databricks
+#  - name: my_databricks
+#    type: databricks
+#    connection_string: databricks://token:dapiXXX@adb-123.azuredatabricks.net?http_path=/sql/1.0/warehouses/abc&catalog=main&schema=default

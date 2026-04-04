@@ -1,0 +1,22 @@
+# virtual environment
+venv/
+
+# sample data — regenerated locally via generate_sample_data.py
+
+
+# profiler output
+output/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# env files
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
