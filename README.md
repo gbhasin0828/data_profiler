@@ -50,7 +50,7 @@ python -m profiler run --config config.yaml
 
 # Results written to output/profiles.json
 ```
-
+If you are not going to run the full program, you can see the outputs I have generated in file -  /output/profiles.json
 ---
 
 ## Folder Structure
