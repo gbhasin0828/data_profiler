@@ -3,7 +3,30 @@
 A configurable data-profiling utility that scans tables across multiple databases and produces a compact summary of table/column metadata and statistics. Output is compatible with the [OpenMetadata](https://open-metadata.org) schema standard.
 
 ---
+# Problem to Solve
+Databases like DuckDB, SQLite, Postgress & Snowflake stores hundreds of tables with different ways and it becomes challenging to understand what data they contain, how clean it is, or how it compares across systems.
+This codebase is a profiler, which answers basic questions about the metadata and data schema. 
+The goal of this project is to automate this process — scan any number of tables across any database, compute meaningful statistics per column, and then store the results in a portable format. The output schema is aligned with the OpenMetadata standard so results can be pushed to any live metadata catalogue.
 
+---
+
+# Methodology
+I have designed one adapter per database engine, one interface for everything else.
+Each database speaks a slightly different SQL commands — e.g., sampling syntax, schema introspection differ slightly between engines so I have created a base file and then created individual files in folder (/adapter) for each Database type. 
+
+Each table in any database goes through the below FOUR steps:
+
+1. Schema discovery — query the database schema to get column names, data types, and comments. This happens through the database itself, not through any external metadata layer.
+2. Stats computation — run one SQL query per column to compute null count, distinct count, min, max, mean, and stddev. 
+3. Sampling — as tables could be very large, the current program computes stats against a sample rather than the full table. EXAMPLE - Instead of scanning say all 1 billion rows, we tell the database to only look at 1% of them — that's 10 million rows. The stats won't be 100% exact but they'll be close enough to be useful.Most importantly "the database does the work, not Python." If we pull all data into Python then it would become very slow and slugish. 
+4. Persistence — results are serialised to JSON using field names from the OpenMetadata tableProfile and columnProfile specification. This means the output is fully compatible with OpenMetadata.
+
+DATABASES COVERED IN THIS PROGRAM
+1. DuckDB (Used a file generate_sample_data.py to create a set of sample data)
+2. SQLite (Used a file generate_sample_data.py to create a set of sample data)
+3. Snowflake (I have used a free tier account and created a sample profile, injected sample data and then used the connection string to pull all data as per the profiler)
+
+---
 ## Quick Start
 
 ```bash
@@ -155,11 +178,3 @@ The output schema aligns with the [OpenMetadata `tableProfile` and `columnProfil
 | Snowflake  | `USAGE` on warehouse, database, schema. `SELECT` on tables. `REFERENCES` on `information_schema`. |
 
 ---
-
-## Assumptions
-
-- Python 3.11 or higher
-- For Snowflake: `snowflake-connector-python >= 3.14.0` (supports Python 3.14)
-- Snowflake connection strings must URL-encode special characters in passwords
-- SQLite sampling is approximate — `RANDOM()` distribution is not perfectly uniform
-- `output/` directory is created automatically if it doesn't exist

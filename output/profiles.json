@@ -1,0 +1,3233 @@
+{
+  "profiled_at": "2026-04-04T21:25:14.733997",
+  "tables": [
+    {
+      "database": "data",
+      "schema": "finance",
+      "table": "payments",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "payment_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "invoice_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "data_type": "DOUBLE",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "payment_type",
+          "data_type": "VARCHAR",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "paid_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "payment_id",
+          "values_count": 80,
+          "null_count": 0,
+          "distinct_count": 80,
+          "distinct_approx": false,
+          "min": 38,
+          "max": 7842,
+          "mean": 3632.475,
+          "stddev": 2315.1902400166505,
+          "histogram": null
+        },
+        {
+          "name": "invoice_id",
+          "values_count": 77,
+          "null_count": 0,
+          "distinct_count": 77,
+          "distinct_approx": false,
+          "min": 654,
+          "max": 9849,
+          "mean": 5276.38961038961,
+          "stddev": 2603.9576061502,
+          "histogram": null
+        },
+        {
+          "name": "amount",
+          "values_count": 80,
+          "null_count": 0,
+          "distinct_count": 80,
+          "distinct_approx": false,
+          "min": 34.71,
+          "max": 1971.49,
+          "mean": 923.8967500000002,
+          "stddev": 578.7928699463188,
+          "histogram": null
+        },
+        {
+          "name": "payment_type",
+          "values_count": 82,
+          "null_count": 0,
+          "distinct_count": 4,
+          "distinct_approx": false,
+          "min": "BANK_TRANSFER",
+          "max": "PAYPAL",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "paid_at",
+          "values_count": 92,
+          "null_count": 16,
+          "distinct_count": 73,
+          "distinct_approx": false,
+          "min": "2022-01-12 00:00:00",
+          "max": "2024-12-19 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "finance",
+      "table": "ledger",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "ledger_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "payment_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "debit",
+          "data_type": "DOUBLE",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "credit",
+          "data_type": "DOUBLE",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "balance",
+          "data_type": "DOUBLE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "posted_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "ledger_id",
+          "values_count": 80,
+          "null_count": 0,
+          "distinct_count": 80,
+          "distinct_approx": false,
+          "min": 64,
+          "max": 7949,
+          "mean": 4090.65,
+          "stddev": 2424.8883471620984,
+          "histogram": null
+        },
+        {
+          "name": "payment_id",
+          "values_count": 80,
+          "null_count": 0,
+          "distinct_count": 80,
+          "distinct_approx": false,
+          "min": 77,
+          "max": 7939,
+          "mean": 3717.2,
+          "stddev": 2396.8137150830325,
+          "histogram": null
+        },
+        {
+          "name": "debit",
+          "values_count": 85,
+          "null_count": 25,
+          "distinct_count": 60,
+          "distinct_approx": false,
+          "min": 30.82,
+          "max": 1997.76,
+          "mean": 915.792166666667,
+          "stddev": 560.7274966251407,
+          "histogram": null
+        },
+        {
+          "name": "credit",
+          "values_count": 94,
+          "null_count": 20,
+          "distinct_count": 74,
+          "distinct_approx": false,
+          "min": 25.72,
+          "max": 1988.01,
+          "mean": 1041.106081081081,
+          "stddev": 605.3824218789707,
+          "histogram": null
+        },
+        {
+          "name": "balance",
+          "values_count": 78,
+          "null_count": 0,
+          "distinct_count": 78,
+          "distinct_approx": false,
+          "min": -498.21,
+          "max": 4999.48,
+          "mean": 2359.5941025641027,
+          "stddev": 1694.6210157799915,
+          "histogram": null
+        },
+        {
+          "name": "posted_at",
+          "values_count": 87,
+          "null_count": 0,
+          "distinct_count": 84,
+          "distinct_approx": false,
+          "min": "2022-01-04 00:00:00",
+          "max": "2024-12-29 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "inventory",
+      "table": "stock_levels",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "stock_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "warehouse_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "product_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "quantity",
+          "data_type": "INTEGER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "reorder_level",
+          "data_type": "INTEGER",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "stock_id",
+          "values_count": 41,
+          "null_count": 0,
+          "distinct_count": 41,
+          "distinct_approx": false,
+          "min": 27,
+          "max": 4813,
+          "mean": 2472.170731707317,
+          "stddev": 1378.534165380732,
+          "histogram": null
+        },
+        {
+          "name": "warehouse_id",
+          "values_count": 50,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": 1,
+          "max": 5,
+          "mean": 2.58,
+          "stddev": 1.3715773728798235,
+          "histogram": null
+        },
+        {
+          "name": "product_id",
+          "values_count": 43,
+          "null_count": 0,
+          "distinct_count": 43,
+          "distinct_approx": false,
+          "min": 6,
+          "max": 479,
+          "mean": 250.13953488372093,
+          "stddev": 131.15777147705026,
+          "histogram": null
+        },
+        {
+          "name": "quantity",
+          "values_count": 48,
+          "null_count": 0,
+          "distinct_count": 48,
+          "distinct_approx": false,
+          "min": 688,
+          "max": 9638,
+          "mean": 5763.125,
+          "stddev": 2421.7154867853837,
+          "histogram": null
+        },
+        {
+          "name": "reorder_level",
+          "values_count": 51,
+          "null_count": 7,
+          "distinct_count": 44,
+          "distinct_approx": false,
+          "min": 51,
+          "max": 497,
+          "mean": 281.0681818181818,
+          "stddev": 122.51272316029963,
+          "histogram": null
+        },
+        {
+          "name": "updated_at",
+          "values_count": 44,
+          "null_count": 0,
+          "distinct_count": 44,
+          "distinct_approx": false,
+          "min": "2022-01-27 00:00:00",
+          "max": "2024-12-20 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "finance",
+      "table": "invoices",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "invoice_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "data_type": "DOUBLE",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "tax",
+          "data_type": "DOUBLE",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "issued_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "due_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "paid_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "invoice_id",
+          "values_count": 104,
+          "null_count": 0,
+          "distinct_count": 104,
+          "distinct_approx": false,
+          "min": 20,
+          "max": 9884,
+          "mean": 5166.865384615385,
+          "stddev": 2965.155606053505,
+          "histogram": null
+        },
+        {
+          "name": "order_id",
+          "values_count": 84,
+          "null_count": 0,
+          "distinct_count": 84,
+          "distinct_approx": false,
+          "min": 290,
+          "max": 19649,
+          "mean": 8693.619047619048,
+          "stddev": 6212.579205390243,
+          "histogram": null
+        },
+        {
+          "name": "amount",
+          "values_count": 112,
+          "null_count": 0,
+          "distinct_count": 112,
+          "distinct_approx": false,
+          "min": 30.97,
+          "max": 1986.13,
+          "mean": 1073.927142857143,
+          "stddev": 589.7622714210898,
+          "histogram": null
+        },
+        {
+          "name": "tax",
+          "values_count": 102,
+          "null_count": 4,
+          "distinct_count": 97,
+          "distinct_approx": false,
+          "min": 3.91,
+          "max": 199.0,
+          "mean": 100.98581632653064,
+          "stddev": 60.96801610247025,
+          "histogram": null
+        },
+        {
+          "name": "issued_at",
+          "values_count": 108,
+          "null_count": 0,
+          "distinct_count": 105,
+          "distinct_approx": false,
+          "min": "2022-01-07 00:00:00",
+          "max": "2024-12-31 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "due_at",
+          "values_count": 96,
+          "null_count": 0,
+          "distinct_count": 93,
+          "distinct_approx": false,
+          "min": "2022-01-15 00:00:00",
+          "max": "2024-12-14 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "paid_at",
+          "values_count": 107,
+          "null_count": 21,
+          "distinct_count": 82,
+          "distinct_approx": false,
+          "min": "2022-02-13 00:00:00",
+          "max": "2024-12-23 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "inventory",
+      "table": "suppliers",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "supplier_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "data_type": "VARCHAR",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "contact_email",
+          "data_type": "VARCHAR",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "country",
+          "data_type": "VARCHAR",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "rating",
+          "data_type": "DOUBLE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "supplier_id",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "name",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "contact_email",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "country",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "rating",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "inventory",
+      "table": "warehouses",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "warehouse_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "data_type": "VARCHAR",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "city",
+          "data_type": "VARCHAR",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "capacity",
+          "data_type": "INTEGER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "data_type": "BOOLEAN",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "warehouse_id",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "name",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "city",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "capacity",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "is_active",
+          "values_count": 0,
+          "null_count": 0,
+          "distinct_count": 0,
+          "distinct_approx": false,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "sales",
+      "table": "customers",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "customer_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "first_name",
+          "data_type": "VARCHAR",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "last_name",
+          "data_type": "VARCHAR",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "email",
+          "data_type": "VARCHAR",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "city",
+          "data_type": "VARCHAR",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "country",
+          "data_type": "VARCHAR",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "customer_id",
+          "values_count": 47,
+          "null_count": 0,
+          "distinct_count": 47,
+          "distinct_approx": false,
+          "min": 69,
+          "max": 4952,
+          "mean": 2152.936170212766,
+          "stddev": 1414.1045315930398,
+          "histogram": null
+        },
+        {
+          "name": "first_name",
+          "values_count": 39,
+          "null_count": 0,
+          "distinct_count": 39,
+          "distinct_approx": false,
+          "min": "First1084",
+          "max": "First950",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "last_name",
+          "values_count": 56,
+          "null_count": 0,
+          "distinct_count": 56,
+          "distinct_approx": false,
+          "min": "Last1010",
+          "max": "Last895",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "email",
+          "values_count": 44,
+          "null_count": 2,
+          "distinct_count": 42,
+          "distinct_approx": false,
+          "min": "user1047@email.com",
+          "max": "user812@email.com",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "city",
+          "values_count": 43,
+          "null_count": 7,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": "Atlanta",
+          "max": "Seattle",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "country",
+          "values_count": 49,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": "USA",
+          "max": "USA",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "created_at",
+          "values_count": 39,
+          "null_count": 0,
+          "distinct_count": 39,
+          "distinct_approx": false,
+          "min": "2022-02-20 00:00:00",
+          "max": "2024-12-26 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "sales",
+      "table": "order_items",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "item_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "product_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "quantity",
+          "data_type": "INTEGER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "unit_price",
+          "data_type": "DOUBLE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "line_total",
+          "data_type": "DOUBLE",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "item_id",
+          "values_count": 300,
+          "null_count": 0,
+          "distinct_count": 300,
+          "distinct_approx": false,
+          "min": 48,
+          "max": 29884,
+          "mean": 14895.656666666666,
+          "stddev": 8714.506790449563,
+          "histogram": null
+        },
+        {
+          "name": "order_id",
+          "values_count": 290,
+          "null_count": 0,
+          "distinct_count": 288,
+          "distinct_approx": false,
+          "min": 92,
+          "max": 19980,
+          "mean": 9923.675862068965,
+          "stddev": 5822.934042510628,
+          "histogram": null
+        },
+        {
+          "name": "product_id",
+          "values_count": 270,
+          "null_count": 0,
+          "distinct_count": 200,
+          "distinct_approx": false,
+          "min": 4,
+          "max": 498,
+          "mean": 259.03333333333336,
+          "stddev": 139.68976114243213,
+          "histogram": null
+        },
+        {
+          "name": "quantity",
+          "values_count": 295,
+          "null_count": 0,
+          "distinct_count": 10,
+          "distinct_approx": false,
+          "min": 1,
+          "max": 10,
+          "mean": 5.596610169491526,
+          "stddev": 2.763339083741436,
+          "histogram": null
+        },
+        {
+          "name": "unit_price",
+          "values_count": 304,
+          "null_count": 0,
+          "distinct_count": 303,
+          "distinct_approx": false,
+          "min": 6.5,
+          "max": 498.34,
+          "mean": 265.17023026315803,
+          "stddev": 141.11383870316965,
+          "histogram": null
+        },
+        {
+          "name": "line_total",
+          "values_count": 317,
+          "null_count": 0,
+          "distinct_count": 316,
+          "distinct_approx": false,
+          "min": 40.42,
+          "max": 4990.74,
+          "mean": 2533.600536277601,
+          "stddev": 1435.3700892444072,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "sales",
+      "table": "products",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "product_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "product_name",
+          "data_type": "VARCHAR",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "category",
+          "data_type": "VARCHAR",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "price",
+          "data_type": "DOUBLE",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "cost",
+          "data_type": "DOUBLE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "data_type": "BOOLEAN",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "product_id",
+          "values_count": 5,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": 7,
+          "max": 440,
+          "mean": 208.8,
+          "stddev": 178.0665605890112,
+          "histogram": null
+        },
+        {
+          "name": "product_name",
+          "values_count": 1,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": "Product 474",
+          "max": "Product 474",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "category",
+          "values_count": 8,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": "Clothing",
+          "max": "Tools",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "price",
+          "values_count": 4,
+          "null_count": 0,
+          "distinct_count": 4,
+          "distinct_approx": false,
+          "min": 89.92,
+          "max": 193.34,
+          "mean": 143.2825,
+          "stddev": 53.320539116429295,
+          "histogram": null
+        },
+        {
+          "name": "cost",
+          "values_count": 5,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": 70.1,
+          "max": 173.78,
+          "mean": 121.05199999999999,
+          "stddev": 37.1938485505332,
+          "histogram": null
+        },
+        {
+          "name": "is_active",
+          "values_count": 11,
+          "null_count": 0,
+          "distinct_count": 2,
+          "distinct_approx": false,
+          "min": false,
+          "max": true,
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "sales",
+      "table": "orders",
+      "engine": "duckdb",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "customer_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "status",
+          "data_type": "VARCHAR",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "total_amount",
+          "data_type": "DOUBLE",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "discount",
+          "data_type": "DOUBLE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "shipped_at",
+          "data_type": "TIMESTAMP",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "order_id",
+          "values_count": 206,
+          "null_count": 0,
+          "distinct_count": 206,
+          "distinct_approx": false,
+          "min": 89,
+          "max": 19952,
+          "mean": 10263.577669902912,
+          "stddev": 5815.781022254534,
+          "histogram": null
+        },
+        {
+          "name": "customer_id",
+          "values_count": 221,
+          "null_count": 0,
+          "distinct_count": 214,
+          "distinct_approx": false,
+          "min": 47,
+          "max": 4892,
+          "mean": 2472.995475113122,
+          "stddev": 1447.1798421184485,
+          "histogram": null
+        },
+        {
+          "name": "status",
+          "values_count": 189,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": "CANCELLED",
+          "max": "SHIPPED",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "total_amount",
+          "values_count": 209,
+          "null_count": 0,
+          "distinct_count": 209,
+          "distinct_approx": false,
+          "min": 15.39,
+          "max": 1982.99,
+          "mean": 975.0092822966511,
+          "stddev": 569.8032576645693,
+          "histogram": null
+        },
+        {
+          "name": "discount",
+          "values_count": 182,
+          "null_count": 55,
+          "distinct_count": 126,
+          "distinct_approx": false,
+          "min": 0.12,
+          "max": 49.5,
+          "mean": 24.05944881889763,
+          "stddev": 14.396295285515528,
+          "histogram": null
+        },
+        {
+          "name": "created_at",
+          "values_count": 201,
+          "null_count": 0,
+          "distinct_count": 182,
+          "distinct_approx": false,
+          "min": "2022-01-05 00:00:00",
+          "max": "2024-12-31 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "shipped_at",
+          "values_count": 201,
+          "null_count": 42,
+          "distinct_count": 149,
+          "distinct_approx": false,
+          "min": "2022-01-09 00:00:00",
+          "max": "2024-12-29 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "customers",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "customer_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "first_name",
+          "data_type": "TEXT",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "last_name",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "email",
+          "data_type": "TEXT",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "city",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "country",
+          "data_type": "TEXT",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "customer_id",
+          "values_count": 18,
+          "null_count": 0,
+          "distinct_count": 18,
+          "distinct_approx": false,
+          "min": 25,
+          "max": 904,
+          "mean": 364.22222222222223,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "first_name",
+          "values_count": 10,
+          "null_count": 0,
+          "distinct_count": 10,
+          "distinct_approx": false,
+          "min": "First104",
+          "max": "First942",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "last_name",
+          "values_count": 8,
+          "null_count": 0,
+          "distinct_count": 8,
+          "distinct_approx": false,
+          "min": "Last221",
+          "max": "Last941",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "email",
+          "values_count": 10,
+          "null_count": 1,
+          "distinct_count": 9,
+          "distinct_approx": false,
+          "min": "user478@email.com",
+          "max": "user983@email.com",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "city",
+          "values_count": 7,
+          "null_count": 0,
+          "distinct_count": 3,
+          "distinct_approx": false,
+          "min": "Atlanta",
+          "max": "New York",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "country",
+          "values_count": 8,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": "USA",
+          "max": "USA",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "created_at",
+          "values_count": 11,
+          "null_count": 0,
+          "distinct_count": 11,
+          "distinct_approx": false,
+          "min": "2022-09-03 00:00:00",
+          "max": "2024-12-20 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "invoices",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "invoice_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "data_type": "REAL",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "tax",
+          "data_type": "REAL",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "issued_at",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "due_at",
+          "data_type": "TEXT",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "paid_at",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "invoice_id",
+          "values_count": 23,
+          "null_count": 0,
+          "distinct_count": 23,
+          "distinct_approx": false,
+          "min": 18,
+          "max": 1922,
+          "mean": 1000.695652173913,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "order_id",
+          "values_count": 19,
+          "null_count": 0,
+          "distinct_count": 19,
+          "distinct_approx": false,
+          "min": 34,
+          "max": 2914,
+          "mean": 1777.7368421052631,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "amount",
+          "values_count": 32,
+          "null_count": 0,
+          "distinct_count": 32,
+          "distinct_approx": false,
+          "min": 34.64,
+          "max": 1960.27,
+          "mean": 1065.434375,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "tax",
+          "values_count": 14,
+          "null_count": 1,
+          "distinct_count": 13,
+          "distinct_approx": false,
+          "min": 49.25,
+          "max": 185.83,
+          "mean": 107.66461538461539,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "issued_at",
+          "values_count": 18,
+          "null_count": 0,
+          "distinct_count": 18,
+          "distinct_approx": false,
+          "min": "2022-01-01 00:00:00",
+          "max": "2024-12-20 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "due_at",
+          "values_count": 20,
+          "null_count": 0,
+          "distinct_count": 20,
+          "distinct_approx": false,
+          "min": "2022-01-26 00:00:00",
+          "max": "2024-11-12 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "paid_at",
+          "values_count": 29,
+          "null_count": 8,
+          "distinct_count": 21,
+          "distinct_approx": false,
+          "min": "2022-02-20 00:00:00",
+          "max": "2024-12-19 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "payments",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "payment_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "invoice_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "data_type": "REAL",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "payment_type",
+          "data_type": "TEXT",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "paid_at",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "payment_id",
+          "values_count": 11,
+          "null_count": 0,
+          "distinct_count": 11,
+          "distinct_approx": false,
+          "min": 253,
+          "max": 1464,
+          "mean": 815.2727272727273,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "invoice_id",
+          "values_count": 22,
+          "null_count": 0,
+          "distinct_count": 22,
+          "distinct_approx": false,
+          "min": 112,
+          "max": 1982,
+          "mean": 955.9090909090909,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "amount",
+          "values_count": 14,
+          "null_count": 0,
+          "distinct_count": 14,
+          "distinct_approx": false,
+          "min": 10.13,
+          "max": 1942.7,
+          "mean": 937.6078571428571,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "payment_type",
+          "values_count": 14,
+          "null_count": 0,
+          "distinct_count": 4,
+          "distinct_approx": false,
+          "min": "BANK_TRANSFER",
+          "max": "PAYPAL",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "paid_at",
+          "values_count": 22,
+          "null_count": 3,
+          "distinct_count": 18,
+          "distinct_approx": false,
+          "min": "2022-01-08 00:00:00",
+          "max": "2024-11-05 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "products",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "product_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "product_name",
+          "data_type": "TEXT",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "category",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "price",
+          "data_type": "REAL",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "cost",
+          "data_type": "REAL",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "data_type": "INTEGER",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "product_id",
+          "values_count": 1,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": 120,
+          "max": 120,
+          "mean": 120.0,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "product_name",
+          "values_count": 2,
+          "null_count": 0,
+          "distinct_count": 2,
+          "distinct_approx": false,
+          "min": "Product 129",
+          "max": "Product 171",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "category",
+          "values_count": 3,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": "Clothing",
+          "max": "Clothing",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "price",
+          "values_count": 1,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": 403.44,
+          "max": 403.44,
+          "mean": 403.44,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "cost",
+          "values_count": 1,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": 144.89,
+          "max": 144.89,
+          "mean": 144.89,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "is_active",
+          "values_count": 3,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": false,
+          "min": 1,
+          "max": 1,
+          "mean": 1.0,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "orders",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "customer_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "status",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "total_amount",
+          "data_type": "REAL",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "discount",
+          "data_type": "REAL",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "TEXT",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "shipped_at",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "order_id",
+          "values_count": 35,
+          "null_count": 0,
+          "distinct_count": 35,
+          "distinct_approx": false,
+          "min": 168,
+          "max": 2976,
+          "mean": 1581.9142857142858,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "customer_id",
+          "values_count": 28,
+          "null_count": 0,
+          "distinct_count": 28,
+          "distinct_approx": false,
+          "min": 36,
+          "max": 981,
+          "mean": 545.7857142857143,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "status",
+          "values_count": 31,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": false,
+          "min": "CANCELLED",
+          "max": "SHIPPED",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "total_amount",
+          "values_count": 22,
+          "null_count": 0,
+          "distinct_count": 22,
+          "distinct_approx": false,
+          "min": 104.82,
+          "max": 1938.57,
+          "mean": 843.9145454545454,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "discount",
+          "values_count": 37,
+          "null_count": 11,
+          "distinct_count": 26,
+          "distinct_approx": false,
+          "min": 2.05,
+          "max": 47.34,
+          "mean": 28.16769230769231,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "created_at",
+          "values_count": 30,
+          "null_count": 0,
+          "distinct_count": 29,
+          "distinct_approx": false,
+          "min": "2022-02-08 00:00:00",
+          "max": "2024-09-21 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "shipped_at",
+          "values_count": 34,
+          "null_count": 9,
+          "distinct_count": 25,
+          "distinct_approx": false,
+          "min": "2022-02-19 00:00:00",
+          "max": "2024-12-09 00:00:00",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "data",
+      "schema": "main",
+      "table": "order_items",
+      "engine": "sqlite",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "item_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "order_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "product_id",
+          "data_type": "INTEGER",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "quantity",
+          "data_type": "INTEGER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "unit_price",
+          "data_type": "REAL",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "line_total",
+          "data_type": "REAL",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "item_id",
+          "values_count": 46,
+          "null_count": 0,
+          "distinct_count": 46,
+          "distinct_approx": false,
+          "min": 73,
+          "max": 4788,
+          "mean": 2492.282608695652,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "order_id",
+          "values_count": 56,
+          "null_count": 0,
+          "distinct_count": 56,
+          "distinct_approx": false,
+          "min": 36,
+          "max": 2964,
+          "mean": 1809.4464285714287,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "product_id",
+          "values_count": 54,
+          "null_count": 0,
+          "distinct_count": 47,
+          "distinct_approx": false,
+          "min": 2,
+          "max": 197,
+          "mean": 104.25925925925925,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "quantity",
+          "values_count": 46,
+          "null_count": 0,
+          "distinct_count": 10,
+          "distinct_approx": false,
+          "min": 1,
+          "max": 10,
+          "mean": 4.891304347826087,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "unit_price",
+          "values_count": 49,
+          "null_count": 0,
+          "distinct_count": 49,
+          "distinct_approx": false,
+          "min": 6.09,
+          "max": 470.49,
+          "mean": 210.71795918367349,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "line_total",
+          "values_count": 46,
+          "null_count": 0,
+          "distinct_count": 46,
+          "distinct_approx": false,
+          "min": 192.76,
+          "max": 4946.99,
+          "mean": 2523.449782608696,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "SALES",
+      "table": "CUSTOMERS",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "C_CUSTKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_NAME",
+          "data_type": "TEXT",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_ADDRESS",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_NATIONKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_PHONE",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_ACCTBAL",
+          "data_type": "NUMBER",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_MKTSEGMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "C_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 8,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "C_CUSTKEY",
+          "values_count": 1504,
+          "null_count": 0,
+          "distinct_count": 1504,
+          "distinct_approx": true,
+          "min": 51,
+          "max": 149734,
+          "mean": "76613.329122",
+          "stddev": 43268.766312598906,
+          "histogram": null
+        },
+        {
+          "name": "C_NAME",
+          "values_count": 1490,
+          "null_count": 0,
+          "distinct_count": 1494,
+          "distinct_approx": true,
+          "min": "Customer#000000068",
+          "max": "Customer#000149989",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "C_ADDRESS",
+          "values_count": 1411,
+          "null_count": 0,
+          "distinct_count": 1402,
+          "distinct_approx": true,
+          "min": " 2XHV5M4bKfNMg5l5W1Uw,O2DnWCzVz6jax4ir",
+          "max": "zy4eVv9ca5TKaXRf5wFNN",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "C_NATIONKEY",
+          "values_count": 1485,
+          "null_count": 0,
+          "distinct_count": 25,
+          "distinct_approx": true,
+          "min": 0,
+          "max": 24,
+          "mean": "11.969697",
+          "stddev": 7.17745964809277,
+          "histogram": null
+        },
+        {
+          "name": "C_PHONE",
+          "values_count": 1479,
+          "null_count": 0,
+          "distinct_count": 1483,
+          "distinct_approx": true,
+          "min": "10-117-734-7278",
+          "max": "34-984-543-6409",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "C_ACCTBAL",
+          "values_count": 1520,
+          "null_count": 0,
+          "distinct_count": 1523,
+          "distinct_approx": true,
+          "min": "-999.85",
+          "max": "9994.41",
+          "mean": "4437.44807237",
+          "stddev": 3129.5629257032956,
+          "histogram": null
+        },
+        {
+          "name": "C_MKTSEGMENT",
+          "values_count": 1469,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": true,
+          "min": "AUTOMOBILE",
+          "max": "MACHINERY",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "C_COMMENT",
+          "values_count": 1463,
+          "null_count": 0,
+          "distinct_count": 1450,
+          "distinct_approx": true,
+          "min": " Tiresias among the boldly regular pinto beans wake pending",
+          "max": "zzle requests-- regular pinto beans haggle blithely across the bl",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "FINANCE",
+      "table": "INVOICES",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "O_ORDERKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_CUSTKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERSTATUS",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_TOTALPRICE",
+          "data_type": "NUMBER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERDATE",
+          "data_type": "DATE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERPRIORITY",
+          "data_type": "TEXT",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_CLERK",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_SHIPPRIORITY",
+          "data_type": "NUMBER",
+          "ordinal_position": 8,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 9,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "O_ORDERKEY",
+          "values_count": 96,
+          "null_count": 0,
+          "distinct_count": 96,
+          "distinct_approx": true,
+          "min": 3000769,
+          "max": 3038181,
+          "mean": "3019748.552083",
+          "stddev": 11262.608619834706,
+          "histogram": null
+        },
+        {
+          "name": "O_CUSTKEY",
+          "values_count": 109,
+          "null_count": 0,
+          "distinct_count": 108,
+          "distinct_approx": true,
+          "min": 491,
+          "max": 149749,
+          "mean": "71750.119266",
+          "stddev": 45224.34546641083,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERSTATUS",
+          "values_count": 94,
+          "null_count": 0,
+          "distinct_count": 3,
+          "distinct_approx": true,
+          "min": "F",
+          "max": "P",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_TOTALPRICE",
+          "values_count": 98,
+          "null_count": 0,
+          "distinct_count": 99,
+          "distinct_approx": true,
+          "min": "6736.78",
+          "max": "455714.84",
+          "mean": "152683.46551020",
+          "stddev": 95396.13044156044,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERDATE",
+          "values_count": 109,
+          "null_count": 0,
+          "distinct_count": 102,
+          "distinct_approx": true,
+          "min": "1992-01-22",
+          "max": "1998-08-02",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERPRIORITY",
+          "values_count": 104,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": true,
+          "min": "1-URGENT",
+          "max": "5-LOW",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_CLERK",
+          "values_count": 107,
+          "null_count": 0,
+          "distinct_count": 102,
+          "distinct_approx": true,
+          "min": "Clerk#000000029",
+          "max": "Clerk#000000950",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_SHIPPRIORITY",
+          "values_count": 113,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": true,
+          "min": 0,
+          "max": 0,
+          "mean": "0.000000",
+          "stddev": 0.0,
+          "histogram": null
+        },
+        {
+          "name": "O_COMMENT",
+          "values_count": 94,
+          "null_count": 0,
+          "distinct_count": 95,
+          "distinct_approx": true,
+          "min": " above the final deposits hag",
+          "max": "yly express instructions. slyly f",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "FINANCE",
+      "table": "SUPPLIERS",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "S_SUPPKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_NAME",
+          "data_type": "TEXT",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_ADDRESS",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_NATIONKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_PHONE",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_ACCTBAL",
+          "data_type": "NUMBER",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "S_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "S_SUPPKEY",
+          "values_count": 94,
+          "null_count": 0,
+          "distinct_count": 95,
+          "distinct_approx": true,
+          "min": 89,
+          "max": 9946,
+          "mean": "4493.648936",
+          "stddev": 2864.558461003022,
+          "histogram": null
+        },
+        {
+          "name": "S_NAME",
+          "values_count": 93,
+          "null_count": 0,
+          "distinct_count": 93,
+          "distinct_approx": true,
+          "min": "Supplier#000000050",
+          "max": "Supplier#000009975",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "S_ADDRESS",
+          "values_count": 113,
+          "null_count": 0,
+          "distinct_count": 113,
+          "distinct_approx": true,
+          "min": " hqZvf3UAZhl0EgVZcm0",
+          "max": "zE,7HgVPrCn",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "S_NATIONKEY",
+          "values_count": 85,
+          "null_count": 0,
+          "distinct_count": 25,
+          "distinct_approx": true,
+          "min": 0,
+          "max": 24,
+          "mean": "10.905882",
+          "stddev": 7.040061434391038,
+          "histogram": null
+        },
+        {
+          "name": "S_PHONE",
+          "values_count": 87,
+          "null_count": 0,
+          "distinct_count": 85,
+          "distinct_approx": true,
+          "min": "10-265-692-9778",
+          "max": "34-787-907-6102",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "S_ACCTBAL",
+          "values_count": 100,
+          "null_count": 0,
+          "distinct_count": 99,
+          "distinct_approx": true,
+          "min": "-913.18",
+          "max": "9998.20",
+          "mean": "4887.32450000",
+          "stddev": 3139.3906880158697,
+          "histogram": null
+        },
+        {
+          "name": "S_COMMENT",
+          "values_count": 93,
+          "null_count": 0,
+          "distinct_count": 92,
+          "distinct_approx": true,
+          "min": " after the dogged deposits. express, final courts wake. carefully even excuses cajole fur",
+          "max": "y even theodolites. closely ironic somas nag quickly. quickly special dependencies ar",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "SALES",
+      "table": "ORDERS",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "O_ORDERKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_CUSTKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERSTATUS",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_TOTALPRICE",
+          "data_type": "NUMBER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERDATE",
+          "data_type": "DATE",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_ORDERPRIORITY",
+          "data_type": "TEXT",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_CLERK",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_SHIPPRIORITY",
+          "data_type": "NUMBER",
+          "ordinal_position": 8,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "O_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 9,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "O_ORDERKEY",
+          "values_count": 15071,
+          "null_count": 0,
+          "distinct_count": 15042,
+          "distinct_approx": true,
+          "min": 1283,
+          "max": 5999232,
+          "mean": "3016083.407869",
+          "stddev": 1733726.4491854424,
+          "histogram": null
+        },
+        {
+          "name": "O_CUSTKEY",
+          "values_count": 15027,
+          "null_count": 0,
+          "distinct_count": 13908,
+          "distinct_approx": true,
+          "min": 16,
+          "max": 149977,
+          "mean": "75425.825381",
+          "stddev": 43497.22482450769,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERSTATUS",
+          "values_count": 15000,
+          "null_count": 0,
+          "distinct_count": 3,
+          "distinct_approx": true,
+          "min": "F",
+          "max": "P",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_TOTALPRICE",
+          "values_count": 15242,
+          "null_count": 0,
+          "distinct_count": 15498,
+          "distinct_approx": true,
+          "min": "933.96",
+          "max": "490133.06",
+          "mean": "152780.73182260",
+          "stddev": 88826.39370825725,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERDATE",
+          "values_count": 14959,
+          "null_count": 0,
+          "distinct_count": 2427,
+          "distinct_approx": true,
+          "min": "1992-01-01",
+          "max": "1998-08-02",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_ORDERPRIORITY",
+          "values_count": 15026,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": true,
+          "min": "1-URGENT",
+          "max": "5-LOW",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_CLERK",
+          "values_count": 14941,
+          "null_count": 0,
+          "distinct_count": 1001,
+          "distinct_approx": true,
+          "min": "Clerk#000000001",
+          "max": "Clerk#000001000",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "O_SHIPPRIORITY",
+          "values_count": 15025,
+          "null_count": 0,
+          "distinct_count": 1,
+          "distinct_approx": true,
+          "min": 0,
+          "max": 0,
+          "mean": "0.000000",
+          "stddev": 0.0,
+          "histogram": null
+        },
+        {
+          "name": "O_COMMENT",
+          "values_count": 15052,
+          "null_count": 0,
+          "distinct_count": 14752,
+          "distinct_approx": true,
+          "min": " Tiresias. blithely regular deposits could engage slyly furiously regular foxe",
+          "max": "zzle slyly bold excuses. fluffily pending dinos wa",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "SALES",
+      "table": "PRODUCTS",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "P_PARTKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_NAME",
+          "data_type": "TEXT",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_MFGR",
+          "data_type": "TEXT",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_BRAND",
+          "data_type": "TEXT",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_TYPE",
+          "data_type": "TEXT",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_SIZE",
+          "data_type": "NUMBER",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_CONTAINER",
+          "data_type": "TEXT",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_RETAILPRICE",
+          "data_type": "NUMBER",
+          "ordinal_position": 8,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "P_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 9,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "P_PARTKEY",
+          "values_count": 2018,
+          "null_count": 0,
+          "distinct_count": 1978,
+          "distinct_approx": true,
+          "min": 13,
+          "max": 199791,
+          "mean": "101004.508424",
+          "stddev": 57600.96549928959,
+          "histogram": null
+        },
+        {
+          "name": "P_NAME",
+          "values_count": 2011,
+          "null_count": 0,
+          "distinct_count": 2032,
+          "distinct_approx": true,
+          "min": "almond aquamarine mint olive drab",
+          "max": "yellow white cornsilk goldenrod lemon",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "P_MFGR",
+          "values_count": 2022,
+          "null_count": 0,
+          "distinct_count": 5,
+          "distinct_approx": true,
+          "min": "Manufacturer#1",
+          "max": "Manufacturer#5",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "P_BRAND",
+          "values_count": 2001,
+          "null_count": 0,
+          "distinct_count": 25,
+          "distinct_approx": true,
+          "min": "Brand#11",
+          "max": "Brand#55",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "P_TYPE",
+          "values_count": 1938,
+          "null_count": 0,
+          "distinct_count": 149,
+          "distinct_approx": true,
+          "min": "ECONOMY ANODIZED BRASS",
+          "max": "STANDARD POLISHED TIN",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "P_SIZE",
+          "values_count": 2001,
+          "null_count": 0,
+          "distinct_count": 50,
+          "distinct_approx": true,
+          "min": 1,
+          "max": 50,
+          "mean": "25.337331",
+          "stddev": 14.615801414907088,
+          "histogram": null
+        },
+        {
+          "name": "P_CONTAINER",
+          "values_count": 2047,
+          "null_count": 0,
+          "distinct_count": 40,
+          "distinct_approx": true,
+          "min": "JUMBO BAG",
+          "max": "WRAP PKG",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "P_RETAILPRICE",
+          "values_count": 1992,
+          "null_count": 0,
+          "distinct_count": 1903,
+          "distinct_approx": true,
+          "min": "914.01",
+          "max": "2090.99",
+          "mean": "1495.93053715",
+          "stddev": 293.54613153384565,
+          "histogram": null
+        },
+        {
+          "name": "P_COMMENT",
+          "values_count": 1955,
+          "null_count": 0,
+          "distinct_count": 1898,
+          "distinct_approx": true,
+          "min": " about t",
+          "max": "ys nag ",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    },
+    {
+      "database": "SAMPLE_DATA",
+      "schema": "SALES",
+      "table": "ORDER_ITEMS",
+      "engine": "snowflake",
+      "row_count": null,
+      "sample_pct": 1.0,
+      "columns": [
+        {
+          "name": "L_ORDERKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 1,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_PARTKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 2,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_SUPPKEY",
+          "data_type": "NUMBER",
+          "ordinal_position": 3,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_LINENUMBER",
+          "data_type": "NUMBER",
+          "ordinal_position": 4,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_QUANTITY",
+          "data_type": "NUMBER",
+          "ordinal_position": 5,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_EXTENDEDPRICE",
+          "data_type": "NUMBER",
+          "ordinal_position": 6,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_DISCOUNT",
+          "data_type": "NUMBER",
+          "ordinal_position": 7,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_TAX",
+          "data_type": "NUMBER",
+          "ordinal_position": 8,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_RETURNFLAG",
+          "data_type": "TEXT",
+          "ordinal_position": 9,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_LINESTATUS",
+          "data_type": "TEXT",
+          "ordinal_position": 10,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_SHIPDATE",
+          "data_type": "DATE",
+          "ordinal_position": 11,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_COMMITDATE",
+          "data_type": "DATE",
+          "ordinal_position": 12,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_RECEIPTDATE",
+          "data_type": "DATE",
+          "ordinal_position": 13,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_SHIPINSTRUCT",
+          "data_type": "TEXT",
+          "ordinal_position": 14,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_SHIPMODE",
+          "data_type": "TEXT",
+          "ordinal_position": 15,
+          "is_nullable": true,
+          "comment": null
+        },
+        {
+          "name": "L_COMMENT",
+          "data_type": "TEXT",
+          "ordinal_position": 16,
+          "is_nullable": true,
+          "comment": null
+        }
+      ],
+      "column_stats": [
+        {
+          "name": "L_ORDERKEY",
+          "values_count": 59622,
+          "null_count": 0,
+          "distinct_count": 56619,
+          "distinct_approx": true,
+          "min": 101,
+          "max": 5999975,
+          "mean": "3005920.478112",
+          "stddev": 1732248.5723282795,
+          "histogram": null
+        },
+        {
+          "name": "L_PARTKEY",
+          "values_count": 59677,
+          "null_count": 0,
+          "distinct_count": 50297,
+          "distinct_approx": true,
+          "min": 6,
+          "max": 200000,
+          "mean": "100106.187677",
+          "stddev": 57765.174124221965,
+          "histogram": null
+        },
+        {
+          "name": "L_SUPPKEY",
+          "values_count": 59985,
+          "null_count": 0,
+          "distinct_count": 9957,
+          "distinct_approx": true,
+          "min": 1,
+          "max": 10000,
+          "mean": "4992.161640",
+          "stddev": 2881.6353737983577,
+          "histogram": null
+        },
+        {
+          "name": "L_LINENUMBER",
+          "values_count": 59917,
+          "null_count": 0,
+          "distinct_count": 7,
+          "distinct_approx": true,
+          "min": 1,
+          "max": 7,
+          "mean": "2.988868",
+          "stddev": 1.7281030061891567,
+          "histogram": null
+        },
+        {
+          "name": "L_QUANTITY",
+          "values_count": 59982,
+          "null_count": 0,
+          "distinct_count": 50,
+          "distinct_approx": true,
+          "min": "1.00",
+          "max": "50.00",
+          "mean": "25.51127005",
+          "stddev": 14.397757055760456,
+          "histogram": null
+        },
+        {
+          "name": "L_EXTENDEDPRICE",
+          "values_count": 60090,
+          "null_count": 0,
+          "distinct_count": 56220,
+          "distinct_approx": true,
+          "min": "923.00",
+          "max": "103598.50",
+          "mean": "38259.06569013",
+          "stddev": 23313.15857466126,
+          "histogram": null
+        },
+        {
+          "name": "L_DISCOUNT",
+          "values_count": 60000,
+          "null_count": 0,
+          "distinct_count": 11,
+          "distinct_approx": true,
+          "min": "0.00",
+          "max": "0.10",
+          "mean": "0.05002333",
+          "stddev": 0.03164800309656203,
+          "histogram": null
+        },
+        {
+          "name": "L_TAX",
+          "values_count": 60061,
+          "null_count": 0,
+          "distinct_count": 9,
+          "distinct_approx": true,
+          "min": "0.00",
+          "max": "0.08",
+          "mean": "0.04019264",
+          "stddev": 0.025714715631326743,
+          "histogram": null
+        },
+        {
+          "name": "L_RETURNFLAG",
+          "values_count": 60200,
+          "null_count": 0,
+          "distinct_count": 3,
+          "distinct_approx": true,
+          "min": "A",
+          "max": "R",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_LINESTATUS",
+          "values_count": 59790,
+          "null_count": 0,
+          "distinct_count": 2,
+          "distinct_approx": true,
+          "min": "F",
+          "max": "O",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_SHIPDATE",
+          "values_count": 59684,
+          "null_count": 0,
+          "distinct_count": 2544,
+          "distinct_approx": true,
+          "min": "1992-01-02",
+          "max": "1998-11-30",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_COMMITDATE",
+          "values_count": 60108,
+          "null_count": 0,
+          "distinct_count": 2483,
+          "distinct_approx": true,
+          "min": "1992-02-02",
+          "max": "1998-10-31",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_RECEIPTDATE",
+          "values_count": 59946,
+          "null_count": 0,
+          "distinct_count": 2557,
+          "distinct_approx": true,
+          "min": "1992-01-09",
+          "max": "1998-12-24",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_SHIPINSTRUCT",
+          "values_count": 60294,
+          "null_count": 0,
+          "distinct_count": 4,
+          "distinct_approx": true,
+          "min": "COLLECT COD",
+          "max": "TAKE BACK RETURN",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_SHIPMODE",
+          "values_count": 60033,
+          "null_count": 0,
+          "distinct_count": 7,
+          "distinct_approx": true,
+          "min": "AIR",
+          "max": "TRUCK",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        },
+        {
+          "name": "L_COMMENT",
+          "values_count": 59901,
+          "null_count": 0,
+          "distinct_count": 58273,
+          "distinct_approx": true,
+          "min": " Tiresias according to the fluffi",
+          "max": "zzle slyly. slyly ",
+          "mean": null,
+          "stddev": null,
+          "histogram": null
+        }
+      ]
+    }
+  ]
+}
